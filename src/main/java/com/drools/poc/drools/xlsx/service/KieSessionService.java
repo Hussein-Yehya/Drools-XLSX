@@ -1,4 +1,4 @@
-package com.drools.poc.droolsXlsx.service;
+package com.drools.poc.drools.xlsx.service;
 
 import java.util.List;
 import java.util.Map;

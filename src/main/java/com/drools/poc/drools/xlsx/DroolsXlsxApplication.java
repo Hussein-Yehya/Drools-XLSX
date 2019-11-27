@@ -1,4 +1,4 @@
-package com.drools.poc.droolsXlsx;
+package com.drools.poc.drools.xlsx;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

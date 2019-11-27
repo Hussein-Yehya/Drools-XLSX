@@ -1,4 +1,4 @@
-package com.drools.poc.droolsXlsx.configuration;
+package com.drools.poc.drools.xlsx.configuration;
 
 import java.io.IOException;
 import java.util.Arrays;

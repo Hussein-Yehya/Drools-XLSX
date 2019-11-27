@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.drools.poc</groupId>
-	<artifactId>droolsXlsx</artifactId>
+	<artifactId>drools-xlsx</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>droolsXlsx</name>
+	<name>drools-xlsx</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

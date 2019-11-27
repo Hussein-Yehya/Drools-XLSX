@@ -1,4 +1,4 @@
-package com.drools.poc.droolsXlsx.service;
+package com.drools.poc.drools.xlsx.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

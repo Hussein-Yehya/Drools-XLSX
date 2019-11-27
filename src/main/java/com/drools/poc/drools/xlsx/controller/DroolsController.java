@@ -1,4 +1,4 @@
-package com.drools.poc.droolsXlsx.controller;
+package com.drools.poc.drools.xlsx.controller;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,19 +11,19 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.drools.poc.droolsXlsx.model.Addendum;
-import com.drools.poc.droolsXlsx.model.Bill;
-import com.drools.poc.droolsXlsx.model.Bill.Status;
-import com.drools.poc.droolsXlsx.model.BillCalculation;
-import com.drools.poc.droolsXlsx.model.BillCalculation.BillCalculationEnum;
-import com.drools.poc.droolsXlsx.model.Plan;
-import com.drools.poc.droolsXlsx.model.Rule;
-import com.drools.poc.droolsXlsx.model.Service;
-import com.drools.poc.droolsXlsx.model.Service.Type;
-import com.drools.poc.droolsXlsx.model.ServiceOrigin;
-import com.drools.poc.droolsXlsx.model.ServicePrice;
-import com.drools.poc.droolsXlsx.service.DroolsService;
-import com.drools.poc.droolsXlsx.service.KieSessionService;
+import com.drools.poc.drools.xlsx.model.Addendum;
+import com.drools.poc.drools.xlsx.model.Bill;
+import com.drools.poc.drools.xlsx.model.BillCalculation;
+import com.drools.poc.drools.xlsx.model.Plan;
+import com.drools.poc.drools.xlsx.model.Rule;
+import com.drools.poc.drools.xlsx.model.Service;
+import com.drools.poc.drools.xlsx.model.ServiceOrigin;
+import com.drools.poc.drools.xlsx.model.ServicePrice;
+import com.drools.poc.drools.xlsx.model.Bill.Status;
+import com.drools.poc.drools.xlsx.model.BillCalculation.BillCalculationEnum;
+import com.drools.poc.drools.xlsx.model.Service.Type;
+import com.drools.poc.drools.xlsx.service.DroolsService;
+import com.drools.poc.drools.xlsx.service.KieSessionService;
 
 @RestController
 public class DroolsController {

@@ -1,4 +1,4 @@
-package com.drools.poc.droolsXlsx.model;
+package com.drools.poc.drools.xlsx.model;
 
 public class BillCalculation {
 
