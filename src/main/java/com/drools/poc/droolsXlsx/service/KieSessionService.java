@@ -1,5 +1,7 @@
 package com.drools.poc.droolsXlsx.service;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import org.kie.api.runtime.KieSession;
@@ -12,12 +14,27 @@ public class KieSessionService {
 	@Autowired
 	private KieSession kieSession;
 
-	public <T> T insert(T clazz, String agendaGroup) {
+	public <T> void fireAllRules(List<T> clazz, String agendaGroup, Map<String, Object> globalVariables) {
+
+		kieSession.getKieBase().newKieSession();
+
 		this.checkAgendaGroupKieSession(agendaGroup);
 
-		kieSession.insert(clazz);
+		this.checkGlobalVariables(globalVariables);
+
+		clazz.forEach(c -> kieSession.insert(c));
+
 		kieSession.fireAllRules();
-		return clazz;
+
+		kieSession.dispose();
+
+	}
+
+	private void checkGlobalVariables(Map<String, Object> globalVariables) {
+
+		if (Objects.nonNull(globalVariables)) {
+			globalVariables.forEach(kieSession::setGlobal);
+		}
 	}
 
 	public void checkAgendaGroupKieSession(String agendaGroup) {

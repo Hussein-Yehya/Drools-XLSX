@@ -25,7 +25,7 @@ public class DroolsConfiguration {
 
 	private KieFileSystem getKieFileSystem() throws IOException {
 		KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-		List<String> rules = Arrays.asList("rules.xlsx");
+		List<String> rules = Arrays.asList("rulesContract.xlsx");
 		for (String rule : rules) {
 			kieFileSystem.write(ResourceFactory.newClassPathResource(rule));
 		}
@@ -33,6 +33,7 @@ public class DroolsConfiguration {
 
 	}
 
+	@Bean
 	public KieContainer getKieContainer() throws IOException {
 		getKieRepository();
 
@@ -54,19 +55,21 @@ public class DroolsConfiguration {
 			}
 		});
 	}
-	
+
 	@Bean
 	public KieSession getKieSession() {
+		
 		getKieRepository();
+		
 		KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-		Resource newClassPathResource = ResourceFactory.newClassPathResource("rules.xlsx");
+		Resource newClassPathResource = ResourceFactory.newClassPathResource("rulesContract.xlsx");
 
 		DecisionTableProviderImpl decisionTableProvider = new DecisionTableProviderImpl();
 
 		String drl = decisionTableProvider.loadFromResource(newClassPathResource, null);
-		
+
 		System.out.println(drl);
- 
+
 		kieFileSystem.write(newClassPathResource);
 
 		KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
